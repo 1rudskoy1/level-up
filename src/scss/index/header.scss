@@ -5,7 +5,8 @@ body{
 	background: #212429;
 	display: flex;
 	justify-content: space-between;
-	z-index: 0;
+	z-index: -2;
+    height: 300px;
 	&__search{
 		position: relative;
 	    width: 205px;
@@ -17,7 +18,7 @@ body{
 		&_svg{
 			position: absolute;
 			left: 45px;
-			top: 37px;
+			top: 30px;
 		}
 	}
 }
@@ -62,8 +63,7 @@ body{
 	}
 }
 .menu__logo{
-	margin-top: 8px;
-	margin-left: 80px;
+    margin: 8px 0 8px 80px;
 }
 .search__input{
     &_svg{
@@ -86,4 +86,83 @@ body{
 }
 .search__input_active{
 	border:1px solid white;
+}
+.slider{
+	position: absolute;
+	top: 65px;
+	width: 100%;
+	&__img{
+		width: 93.5%;;
+	    z-index: -1;
+	    margin: 0 auto;
+	    display: block;
+	}
+	&__title{
+		color: white;
+	    font-weight: 500;
+	    position: absolute;
+	    top: 42%;
+	    left: 11%;
+	    font-size: 18px;
+	}
+	&__head{
+	    color: white;
+	    color: white;
+	    position: absolute;
+	    top: 47%;
+	    left: 11%;
+	    font-size: 42px;
+	}
+}
+.switch{
+    color: white;
+    position: absolute;
+    top: 39%;
+    left: 90%;
+	&__buttons{
+		position: relative;
+		&_button{
+		    border: 1px solid white;
+		    width: 10px;
+		    display: block;
+		    height: 11px;
+		    position: absolute;
+
+		    &:hover{
+		    	cursor:pointer;
+		    	background: #999999;
+		    }
+
+		    &:nth-child(2){
+		    	top: 30px;
+		    }
+		     &:last-child{
+		    	top: 60px;
+		    }
+		}
+	}
+	&__toward{
+	
+		&_text{
+		font-size: 15px;
+		-moz-transform: rotate(-90deg);
+   		-ms-transform: rotate(-90deg);
+   		-webkit-transform: rotate(-90deg);
+    	-o-transform: rotate(-90deg);
+    	transform: rotate(-90deg);
+    	width: 122px;
+		}
+		&_up{
+		    position: absolute;
+		    top: -62px;
+		    left: 57px;
+		    cursor: pointer;
+		}
+		&_down{
+			top: 90px;
+		    left: 56px;
+		    position: absolute;
+		    cursor: pointer  ;
+		}
+	}
 }
