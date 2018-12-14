@@ -166,3 +166,28 @@ body{
 		}
 	}
 }
+.navigation{
+	background: #212429;
+	height: 56px;
+    position: absolute;
+    top: 650px;
+    width: 93.6%;
+    margin: 0 3.2%;
+	&__items{
+		display: flex;
+	    justify-content: space-around;
+	    list-style: none;
+	    margin-top: 16px;
+		&_item{
+			color: white;
+			font-size: 18px;
+			font-weight: bold;
+			font-family: Myriad Pro,sans-serif;
+			cursor: pointer;
+			&-active{
+				border-bottom: 2.5px solid white;
+    			padding-bottom: 9.6px;
+			}
+		}
+	}
+}
