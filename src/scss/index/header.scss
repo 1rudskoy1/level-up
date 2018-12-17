@@ -90,7 +90,7 @@ body{
 .slider{
 	position: absolute;
 	top: 65px;
-	width: 100%;
+	width: 99%;
 	&__img{
 		width: 93.5%;;
 	    z-index: -1;
@@ -169,7 +169,6 @@ body{
 .navigation{
 	background: #212429;
 	height: 56px;
-    position: absolute;
     top: 650px;
     width: 93.6%;
     margin: 0 3.2%;
@@ -178,15 +177,17 @@ body{
 	    justify-content: space-around;
 	    list-style: none;
 	    margin-top: 16px;
+	    padding-top:17px;
 		&_item{
 			color: white;
 			font-size: 18px;
 			font-weight: bold;
 			font-family: Myriad Pro,sans-serif;
 			cursor: pointer;
+			padding-bottom: 9.6px;
+			border-bottom: 2.5px solid #212429;
 			&-active{
 				border-bottom: 2.5px solid white;
-    			padding-bottom: 9.6px;
 			}
 		}
 	}
