@@ -2,6 +2,9 @@
 	.Article{
 		margin-top: 24%;
 	}
+	.full-article{
+		margin: 25% auto 0 auto;
+	}
 }
 @media screen and (max-width: 1200px){
 	.slider__head{
@@ -12,6 +15,9 @@
 	}
 	.Article{
 		margin-top: 22%;
+	}
+	.full-article{
+		margin: 23% auto 0 auto;
 	}
 }
 @media screen and (max-width: 992px){
@@ -38,6 +44,9 @@
 	.navigation__items_item {
 	    padding-bottom: 14.6px;
 	}
+	.full-article{
+		margin: 20% auto 0 auto;
+	}
 }
 @media screen and (max-width: 880px){
 	.Article{
@@ -45,6 +54,15 @@
 	}
 }
 @media screen and (max-width: 768px){
+	.full-article{
+		margin: 34% auto 0 auto;
+	}
+	.full-article__content_title {
+		margin-bottom: 5px;
+	}
+	.full-article__content_head{
+		font-size:25px;
+	}
 	.slider__head{
 		font-size: 23px;
 		top: 25%;
