@@ -1,46 +1,53 @@
-var slides = document.querySelectorAll(".slide");
-var switch_Up = document.querySelectorAll(".switch__toward_up");
-var switch_Down = document.querySelectorAll(".switch__toward_down");
-var search = document.querySelector(".search__input_svg");
-var search_input = document.querySelector(".search__input");
-var burger_icon = document.querySelector(".menu__burger_svg");
-var burger_menu = document.querySelector(".items");
+//Burger_menu
 
-burger_icon.onclick = function () {
+document.querySelector(".menu__burger_svg").addEventListener("click", function () {
+	var burger_menu = document.querySelector(".items");
 	if(burger_menu.style.display == "block") {
 		burger_menu.style.display = "none";
-	}else{
+	}else {
 		burger_menu.style.display = "block";
 	}
+});
 
-}
-search.onclick = function () {
+
+// Search
+
+document.querySelector(".search__input_svg").addEventListener("click", function () {
+	let search_input = document.querySelector(".search__input");
 	search_input.className += " search__input_active"; 
-}
-for(let i = 1; i < slides.length; i++){
-	slides[i].style.display = "none";
-}
-for(let i = 0;i < switch_Up.length;i++){
-	switch_Up[i].onclick = function () {
-		let next = i+1;
-		if(i >= slides.length-1){
-			slides[i].style.display = "none";
-			slides[0].style.display = "block";
-			next = 0;
-		}
-		slides[i].style.display = "none";
-		slides[next].style.display = "block";
+});
+
+
+
+
+//Slide
+function slide(classes, target){
+	let slides = document.querySelectorAll(classes);
+	let tabs = document.querySelectorAll(target);
+	let index = 0;
+	for (i = 1; i <slides.length;i++){
+		slides[i].style.display = " none";
 	}
+	for (i = 0; i < tabs.length; i++) {
+		tabs[i].addEventListener("click", function(e){
+			for(let j = 0; j < slides.length; j++){
+				slides[j].style.display = " none"
+			}
+			if(e.target.classList.contains("switch__toward_up") === true){
+				if(index != 0){
+					index--;
+				}
+				slides[index].style.display = "block";
+			}else{
+				if(index >= 2){
+					index = 0;
+				}else{
+					index++;
+				}
+				slides[index].style.display = "block";
+			}	
+		});
+	}	
 }
-for(let i = 0;i < switch_Down.length;i++){
-	switch_Down[i].onclick = function () {
-		 if( i <=0 ){
-			slides[switch_Down.length-1].style.display = "block";
-		 	slides[i].style.display = "none";
-		}else{
-			let late = i-1;
-			slides[i].style.display = "none";
-			slides[late].style.display = "block";
-		}
-	}
-}
+
+slide(".slide", ".switch__toward i");
